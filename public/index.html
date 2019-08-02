@@ -7,7 +7,9 @@
     <title>League Coach</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <link href="~bulma-carousel/dist/css/bulma-carousel.min.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="~bulma-carousel/dist/js/bulma-carousel.min.js"></script>
 </head>
 
 <body>
@@ -71,7 +73,7 @@
         <section class="section">
             <div class="container">
                 <!-- Start Carousel -->
-                <div id="carousel-demo" class="carousel">
+                <div id="carousel-demo" class="carousel" data-slides-to-scroll="5">
                     <div class="item-1">
                         <!-- Slide Content -->
                     </div>
@@ -92,6 +94,14 @@
                 slidesToScroll: 1,
                 slidesToShow: 4
             });
+            // Initialize all elements with carousel class.
+            const carousels = bulmaCarousel.attach('.carousel', options);
+
+            // To access to bulmaCarousel instance of an element
+            const element = document.querySelector('#my-element');
+            if (element && element.bulmaCarousel) {
+                // bulmaCarousel instance is available as element.bulmaCarousel
+            }
         </script>
     </table>
 
