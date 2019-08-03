@@ -14,7 +14,7 @@ function showResults(results) {
   function appendResults(title, ID, description, image, index) {
       
       
-        $('<div class = "container"><div class = "card"><div class="card-image"><figure class="image is-4by3"><img src="' + image + '" alt=""></figure><div class="card-content"><div class="media"><div class="media-left"></figure></div><a href="https://www.youtube.com/watch?v=' + ID + '" target="_blank"><img class="media-object" </a></div><div class="media-body"><h4 class="title is-4"> ' + title + '</h4><div class="content">'+ description +'</a><a href="https://www.youtube.com/watch?v=' + ID + '" class="btn btn-default" target="_blank">Watch Video</a></div></div></div></div><br><br><br>').appendTo(".item-"+index);
+        $('<div class = "item-"+(index+1)><div class = "container"><div class = "card"><div class="card-image"><figure class="image is-4by3"><img src="' + image + '" alt=""></figure><div class="card-content"><div class="media"><div class="media-left"></figure></div><a href="https://www.youtube.com/watch?v=' + ID + '" target="_blank"><img class="media-object" </a></div><div class="media-body"><h4 class="title is-4"> ' + title + '</h4><div class="content">'+ description +'</a><a href="https://www.youtube.com/watch?v=' + ID + '" class="btn btn-default" target="_blank">Watch Video</a></div></div></div></div></div><br><br><br>').appendTo(".item-"+(index+1));
       
 
   };
@@ -44,12 +44,19 @@ function showResults(results) {
   });
   
   function clearResults() {
-    $(".carousel .media").fadeOut();
+    $(".carousel .media").remove();
     $('.video-search').val("").focus();
     
   };
   
-  $('.search-clear').on("click", delete(clearResults));
+  $('.search-clear').on("click", function()
+  {
+    
+    for(var x = 1; x <=10; x++)
+    {
+    $('.item-'+(x)).empty();
+    }
+  });
   
   
   
