@@ -1,3 +1,36 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.youtube-header
+{
+  font-weight: 700px;
+}
+
+#main-sec
+{
+  float:left;
+}
+
+#items
+{
+  height: 20%;
+}
+body
+{
+  background-color: #31334a;
+}
+
+#header-style
+{
+  background-color: #4b4e68;
+}
+
+#youtube-color
+{
+  color: white;
+}
+#search-color
+{
+  color: white;
+}
