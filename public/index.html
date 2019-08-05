@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>League Coach</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
@@ -14,26 +15,27 @@
 
 <body>
     <section class="hero is-primary ">
-            
-        <div class="hero-body" id = "header-style">
-            
+
+        <div class="hero-body" id="header-style">
+
             <div class="container">
-                    <figure class="image is-128x128">
-                            <img class="is-rounded" src="http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png">
-                          </figure>
+                <figure class="image is-128x128">
+                    <img class="is-rounded"
+                        src="http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png">
+                </figure>
                 <h1 class="title">
                     LOL Coach Leaderboard
                 </h1>
                 <h2 class="subtitle">
-                    Get better at this damn game
+                    Get better at this game
                 </h2>
             </div>
         </div>
     </section>
 
 
-    <input class="input" type="text" placeholder="Enter Your Summoner Name Here">
-    <input class="button is-success is-large" type="submit" value="Submit">
+    <input class="input" type="text" id="summonerName" placeholder="Enter Your Summoner Name Here">
+    <input class="button is-success is-large" id="submit" type="submit" value="Submit">
     <input class="button is-warning is-large" type="reset" value="Refresh">
 
     <table class="table">
@@ -57,40 +59,38 @@
         </thead>
         <tbody>
             <tr>
-                <th>1</th>
+                    <th></th>
+                    <th>{{this.summonerLevel}}</th>
+                    <th>{{this.summonerName}}</th>
+                    <th>{{this.role}}</th>
+                    <th>{{this.lane}}</th>
+
+
+                <th></th>
                 <th>
                     <div class="container"><img href=""></div>
                 </th>
-                <td><strong><a href="https://u.gg/lol/profile/na1/halmakin/overview" title="Summoner">Halmakin</a></strong>
+                <td><strong><a href="https://u.gg/lol/profile/na1/halmakin/overview" title="Summoner"></a></strong>
                 </td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
-                <td>L</td>
             </tr>
         </tbody>
-        <br>
-        <br>
-        <br>
-        <div class=container> 
-            <h1 class = "youtube-header" id = "youtube-color">Youtube Search</h1> 
-            <form class="search-form" id = "searchForm"> 
-                <div class=form-group> 
-                    <input type=text name=video-search id=video-search class="input video-search"> 
-                </div> 
-                <br>
-            <button type=submit class="button is-danger search-submit" id = "btnID">Search</button>
-            
-            </form>
-            <button class="button is-danger search-clear">Clear Search</button>
+    </table>
+    <br>
+    <br>
+    <br>
+    <div class=container>
+        <h1 class="youtube-header" id="youtube-color">Youtube Search</h1>
+        <form class="search-form" id="searchForm">
+            <div class=form-group>
+                <input type=text name=video-search id=video-search class="input video-search">
+            </div>
+            <br>
+            <button type=submit class="button is-danger search-submit" id="btnID">Search</button>
 
-            <!-- <section class="section">
+        </form>
+        <button class="button is-danger search-clear">Clear Search</button>
+
+        <!-- <section class="section">
                 <div class="container">
                     
                     <div id="carousel-demo" class="carousel">
@@ -133,57 +133,58 @@
             </section> -->
 
         <section class="hero is-large has-carousel">
-                <div class="hero-head">
+            <div class="hero-head">
                 <div class="hero-body">
-                    
-			<div id="carousel-demo" class="hero-carousel">
-				<div class="item-1" id = "items">
-                    <!-- Slide Content -->
-                    
+
+                    <div id="carousel-demo" class="hero-carousel">
+                        <div class="item-1" id="items">
+                            <!-- Slide Content -->
+
+                        </div>
+                        <div class="item-2" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-3" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-4" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-5" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-6" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-7" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-8" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-9" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="item-10" id="items">
+                            <!-- Slide Content -->
+                        </div>
+                        <div class="hero-foot">
+                        </div>
+                    </div>
                 </div>
-                <div class="item-2" id = "items">
-                    <!-- Slide Content -->
-                </div>
-                <div class="item-3" id = "items">
-                    <!-- Slide Content -->
-                </div>
-                <div class="item-4" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="item-5" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="item-6" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="item-7" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="item-8" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="item-9" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="item-10" id = "items">
-                        <!-- Slide Content -->
-                </div>
-                <div class="hero-foot">
-			</div>
-			</div>
-			</div>
-			</div>
-		</section>
+            </div>
+        </section>
+
         <script src="js/youtube-finder.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
         <script>
-            
+
             bulmaCarousel.attach('#carousel-demo', {
                 slidesToScroll: 1,
                 slidesToShow: 3
             });
         </script>
-    </table>
+
 
 
 </body>

@@ -1,33 +1,174 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+<section class="hero is-primary ">
+
+  <div class="hero-body" id="header-style">
+
+    <div class="container">
+      <figure class="image is-128x128">
+        <img class="is-rounded"
+          src="http://2.bp.blogspot.com/-HqSOKIIV59A/U8WP4WFW28I/AAAAAAAAT5U/qTSiV9UgvUY/s1600/icon.png">
+      </figure>
+      <h1 class="title">
+        LOL Coach Leaderboard
+      </h1>
+      <h2 class="subtitle">
+        Get better at this damn game
+      </h2>
     </div>
   </div>
-</div>
+</section>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+
+<input class="input" type="text" id="summonerName" placeholder="Enter Your Summoner Name Here">
+<input class="button is-success is-large" id="submit" type="submit" value="Submit">
+<input class="button is-warning is-large" type="reset" value="Refresh">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Icon</th>
+      <th>Summoner Name</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {{#each summoners}}
+      <th>{{this.summonerName}}</th>
+      <th>{{this.summonerLevel}}</th>
+      <th>{{this.role}}</th>
+      <th>{{this.lane}}</th>
+      <th>
+        <button type="button" class="delete" data-id="{{this.id}}">delete</button></th>
+      {{/each}}
+      <th>1</th>
+      <th>
+        <div class="container"><img href=""></div>
+      </th>
+      <td><strong><a href="https://u.gg/lol/profile/na1/halmakin/overview" title="Summoner">Halmakin</a></strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<div class=container>
+  <h1 class="youtube-header" id="youtube-color">Youtube Search</h1>
+  <form class="search-form" id="searchForm">
+    <div class=form-group>
+      <input type=text name=video-search id=video-search class="input video-search">
+    </div>
+    <br>
+    <button type=submit class="button is-danger search-submit" id="btnID">Search</button>
+
+  </form>
+  <button class="button is-danger search-clear">Clear Search</button>
+
+  <!-- <section class="section">
+                <div class="container">
+                    
+                    <div id="carousel-demo" class="carousel">
+                        <div class="item-1">
+                           
+                            
+                        </div>
+                        <div class="item-2">
+                        
+                        </div>
+                        <div class="item-3">
+                        
+                        </div>
+                        <div class="item-4">
+                        
+                        </div>
+                        <div class="item-5">
+                       
+                        </div>
+                        <div class="item-6">
+                        
+                        </div>
+                        <div class="item-7">
+                         
+                        </div>
+                        <div class="item-8">
+                       
+                        </div>
+                        <div class="item-9">
+                        
+                        </div>
+                        <div class="item-10">
+                        
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </section> -->
+
+  <section class="hero is-large has-carousel">
+    <div class="hero-head">
+      <div class="hero-body">
+
+        <div id="carousel-demo" class="hero-carousel">
+          <div class="item-1" id="items">
+            <!-- Slide Content -->
+
+          </div>
+          <div class="item-2" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-3" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-4" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-5" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-6" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-7" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-8" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-9" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="item-10" id="items">
+            <!-- Slide Content -->
+          </div>
+          <div class="hero-foot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/youtube-finder.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <script>
+
+    bulmaCarousel.attach('#carousel-demo', {
+      slidesToScroll: 1,
+      slidesToShow: 3
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>

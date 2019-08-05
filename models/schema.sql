@@ -1,5 +1,15 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS summonerdb;
+CREATE DATABASE summonerdb;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+use summonerdb;
+drop table summoners;
+
+create table summoners(
+id integer not null auto_increment,
+summonerName varchar(100) not null,
+summonerLevel integer not null,
+role varchar(100) not null,
+lane varchar(100) not null,
+primary key (id)
+);
+select * from summoners;
