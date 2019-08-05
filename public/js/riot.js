@@ -2,7 +2,7 @@ var axios = require("axios");
 var summonerName = "halmakin";
 var summonerArray = []
 // Then run a request with axios to the OMDB API with the movie specified
-axios.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=RGAPI-1db7b32e-7747-40de-9b70-547790c12ca1").then(
+axios.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=").then(
     function (response) {
         console.log(response.data);
         summonerArray.push(summonerName);
@@ -10,7 +10,7 @@ axios.get("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + s
         summonerArray.push(summonerLevel);
         console.log(summonerArray);
         var accountID = (response.data.accountId);
-        axios.get("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/" + accountID + "?api_key=RGAPI-1db7b32e-7747-40de-9b70-547790c12ca1").then(function (response) {
+        axios.get("https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/" + accountID + "?api_key=").then(function (response) {
             for (var i = 0; i < 1; i++) {
                 console.log(response.data.matches[i]);
                 console.log(response.data.matches[i].gameId + "---" + response.data.matches[i].champion);
